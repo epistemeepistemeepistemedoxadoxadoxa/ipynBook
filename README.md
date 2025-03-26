@@ -39,7 +39,12 @@ pip install notebook
 
 This will install the Jupyter backend that runs your notebooks.
 
-## Step 5: Open or Create a Jupyter Notebook
+## Step 5: Open or Create a Folder, Open That Folder in VSCode
+
+<img width="1312" alt="Screenshot 2025-03-26 at 6 47 17 PM" src="https://github.com/user-attachments/assets/be51acfe-6d6a-4c8c-9230-aeb989d1903c" />
+
+
+## Step 6: Create a Jupyter Notebook
 
 - Open a `.ipynb` file or create a new one:  
   `File > New File > Jupyter Notebook`
