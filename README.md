@@ -132,4 +132,11 @@ If I'm missing a package, I'll usually Google "pip install *name*".
 It'll usually take me to https://pypi.org/ where I can get the correct name...
 I can also paste the error into an LLM
 
+# Feel free to edit the code's programs. The best one for easy editing will be: image_treat_3styles.ipynb
+https://github.com/epistemeepistemeepistemedoxadoxadoxa/ipynBook/blob/main/image_treat_3styles.ipynb
+
+
+
+ 
+
 
