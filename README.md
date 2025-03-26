@@ -1,6 +1,6 @@
 # ipynBook
 
-# P1
+# Part 1
 
 # Setting Up Jupyter Notebooks in Visual Studio Code
 
