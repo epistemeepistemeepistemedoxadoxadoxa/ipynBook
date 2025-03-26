@@ -129,7 +129,7 @@ If your venv isn't setup yet, you'll see an error at the very bottom of the code
 <img width="1149" alt="Screenshot 2025-03-26 at 7 12 46 PM" src="https://github.com/user-attachments/assets/2ccfdb02-ae38-4673-98a5-64d49d332c2d" />
 
 If I'm missing a package, I'll usually Google "pip install *name*".
-It'll usually take me to https://pypi.org/ where I can get the correct name
+It'll usually take me to https://pypi.org/ where I can get the correct name...
 I can also paste the error into an LLM
 
 
