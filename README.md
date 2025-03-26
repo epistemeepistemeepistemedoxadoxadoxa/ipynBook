@@ -82,8 +82,11 @@ venv\Scripts\Activate.ps1
 Install ipynb_requirements.txt file:
 pip install -r ipynb_requirements.txt
 
+## Step 4a: image_treat_3styles.ipynb Specific Installs
 
-## Step 4 ALT: Manually Install Dependencies (Hard Way)
+pip install numpy Pillow opencv-python 
+
+## Step 4b: Manually Install Dependencies (Hard Way)
 
 To manually install packages using pip, you can run the following command after activating your virtual environment:
 
