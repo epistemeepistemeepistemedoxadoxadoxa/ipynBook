@@ -59,7 +59,6 @@ This will install the Jupyter backend that runs your notebooks.
 <img width="316" alt="Screenshot 2025-03-26 at 6 40 02 PM" src="https://github.com/user-attachments/assets/a12c6fe1-589d-44bf-87ad-b8e1d12e666c" />
 
 
-
 ## Step 2: Create a Virtual Environment
 
 python3 -m venv venv
@@ -74,10 +73,18 @@ source venv/bin/activate
 On Windows (PowerShell):
 venv\Scripts\Activate.ps1
 
+## Status: Your Folder Should Look Like This
+
+<img width="1258" alt="Screenshot 2025-03-26 at 6 48 22 PM" src="https://github.com/user-attachments/assets/7e4ff4cd-30b5-42e0-8d0b-1c8f283c8eb6" />
+
 ## Step 4: Install Dependencies
 
 Install ipynb_requirements.txt file:
 pip install -r ipynb_requirements.txt
+
+
+
+
 
 
 
