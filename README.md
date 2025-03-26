@@ -127,5 +127,5 @@ It'll also usually have a star  next to it.
 
 If your venv isn't setup yet, you'll see an error at the very bottom of the code:
 
-<img width="1144" alt="Screenshot 2025-03-26 at 7 11 40 PM" src="https://github.com/user-attachments/assets/04fe041c-cf5c-4fc3-a571-c6176fd297fd" />
+<img width="1149" alt="Screenshot 2025-03-26 at 7 12 46 PM" src="https://github.com/user-attachments/assets/2ccfdb02-ae38-4673-98a5-64d49d332c2d" />
 
