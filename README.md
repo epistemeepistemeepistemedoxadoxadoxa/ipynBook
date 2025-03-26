@@ -132,11 +132,81 @@ If I'm missing a package, I'll usually Google "pip install *name*".
 It'll usually take me to https://pypi.org/ where I can get the correct name...
 I can also paste the error into an LLM
 
-# Feel free to edit the code's programs. The best one for easy editing will be: image_treat_3styles.ipynb
+## Feel free to edit the code's programs. The best one for easy editing will be: image_treat_3styles.ipynb
 https://github.com/epistemeepistemeepistemedoxadoxadoxa/ipynBook/blob/main/image_treat_3styles.ipynb
 
+In the class <i>ImageStyleTransformer</i> all of the image effects are stored... You can paste the entire section of code or just snippets into an LLM along with another effect that you'd to try and see if you can add it...
+To find specific classes in my code, I'll use Command + F and paste the class name.
 
-
+## Example: ChatGPT
  
+Prompt
+"I'd like to add a fisheye effect to this program... How can we do that?"
+
+<img width="1324" alt="Screenshot 2025-03-26 at 7 22 10 PM" src="https://github.com/user-attachments/assets/c0989a09-99b5-4d1f-bde3-e69cc514d1e3" />
+
+ChatGPT
+"To add a fisheye effect to your program, we can create a new style (e.g. “Style 6: Fisheye Distortion”) and apply a remapping transformation to the image using OpenCV."
+
+Here’s how you can implement the fisheye effect:
+
+## 🔧 Step 1: Add the new style option
+
+In both initialize_parameters and create_style_selector, add:
+
+"Style 6: Fisheye"
+
+## 🧠 Step 2: Create a function to apply fisheye distortion
+
+Add this method to your ImageStyleTransformer class:
+
+def apply_fisheye_style(self, img):
+    img_np = np.array(img)
+    height, width = img_np.shape[:2]
+
+    # Normalize coordinates to [-1, 1]
+    x = np.linspace(-1, 1, width)
+    y = np.linspace(-1, 1, height)
+    xv, yv = np.meshgrid(x, y)
+    r = np.sqrt(xv**2 + yv**2)
+
+    # Fisheye distortion factor
+    k = 0.5  # Increase for more distortion
+
+    # Distortion function
+    theta = np.arctan(r)
+    r_distorted = np.tan(theta * (1 + k * r**2))
+
+    # Avoid division by zero
+    r[r == 0] = 1e-6
+    scale = r_distorted / r
+
+    map_x = (xv * scale + 1) * (width - 1) / 2
+    map_y = (yv * scale + 1) * (height - 1) / 2
+
+    # Remap using OpenCV
+    map_x = map_x.astype(np.float32)
+    map_y = map_y.astype(np.float32)
+
+    distorted = cv2.remap(img_np, map_x, map_y, interpolation=cv2.INTER_LINEAR)
+    return Image.fromarray(distorted)
+
+🚀 Step 3: Hook it up in apply_style
+
+Inside your apply_style method, add:
+
+elif "Style 6" in style:
+    img = self.apply_fisheye_style(img)
+
+✅ Optional: Add a slider to control distortion strength
+
+In initialize_parameters, when "Style 6" is selected:
+self.param_controls["fisheye_strength"] = self.create_slider("Fisheye Strength", 0, 100, 50)
+
+Then modify the distortion strength in apply_fisheye_style:
+k = self.param_controls.get("fisheye_strength", tk.IntVar(value=50)).get() / 100
+
+Let me know if you’d like a reverse fisheye, a circular vignette, or a custom center to the distortion..... 
+
 
 
