@@ -108,5 +108,6 @@ A kernel is the computational engine that runs your code. Each virtual environme
 If you’ve already activated your venv, it should show up as something like:
 Python 3.x.x ('venv': venv)
 
+<img width="616" alt="Screenshot 2025-03-26 at 7 03 08 PM" src="https://github.com/user-attachments/assets/e076f650-a5e8-4d9b-bd03-654b3cf512bf" />
 
 
