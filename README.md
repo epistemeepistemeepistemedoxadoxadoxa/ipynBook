@@ -89,4 +89,7 @@ To manually install packages using pip, you can run the following command after 
 
 pip install altgraph==0.17.4 appnope==0.1.4 asttokens==3.0.0 comm==0.2.2 contourpy==1.3.1 cycler==0.12.1 debugpy==1.8.13 decorator==5.2.1 executing==2.2.0 fonttools==4.56.0 imageio==2.37.0 ipykernel==6.29.5 ipython==9.0.2 ipython_pygments_lexers==1.1.1 ipywidgets==8.1.5 jedi==0.19.2 joblib==1.4.2 jupyter_client==8.6.3 jupyter_core==5.7.2 jupyterlab_widgets==3.0.13 kiwisolver==1.4.8 macholib==1.16.3 matplotlib==3.10.1 matplotlib-inline==0.1.7 nest-asyncio==1.6.0 numpy==2.2.4 opencv-python==4.11.0.86 packaging==24.2 parso==0.8.4 pdf2image==1.17.0 pexpect==4.9.0 pillow==11.1.0 platformdirs==4.3.7 prompt_toolkit==3.0.50 psutil==7.0.0 ptyprocess==0.7.0 pure_eval==0.2.3 Pygments==2.19.1 pyinstaller==6.12.0 pyinstaller-hooks-contrib==2025.2 pyparsing==3.2.3 pytesseract==0.3.13 python-dateutil==2.9.0.post0 pyzmq==26.3.0 scikit-learn==1.6.1 scipy==1.15.2 setuptools==78.0.2 six==1.17.0 stack-data==0.6.3 threadpoolctl==3.6.0 tornado==6.4.2 traitlets==5.14.3 wcwidth==0.2.13 widgetsnbextension==4.0.13
 
+## Step 5: Download Programs and Try Them Out
+
+
 
