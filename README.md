@@ -48,6 +48,9 @@ This will install the Jupyter backend that runs your notebooks.
 
 # Step 1: Open the Terminal in VS Code
 
+<img width="1800" alt="Screenshot 2025-03-26 at 6 40 05 PM" src="https://github.com/user-attachments/assets/c327ea33-4513-4e4d-ab1e-8e9bc6c9eaaa" />
+<img width="316" alt="Screenshot 2025-03-26 at 6 40 02 PM" src="https://github.com/user-attachments/assets/a12c6fe1-589d-44bf-87ad-b8e1d12e666c" />
+
 
 
 # Step 1: Open the Terminal in VS Code
