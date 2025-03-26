@@ -83,7 +83,7 @@ Install ipynb_requirements.txt file:
 pip install -r ipynb_requirements.txt
 
 
-## Step 4ALT: Manually Install Dependencies (Hard Way)
+## Step 4 ALT: Manually Install Dependencies (Hard Way)
 
 To manually install packages using pip, you can run the following command after activating your virtual environment:
 
