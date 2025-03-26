@@ -126,6 +126,7 @@ It'll also usually have a star  next to it.
 
 
 If your venv isn't setup yet, you'll see an error at the very bottom of the code.
+
 If I'm missing a package, I'll usually Google "pip install *name*"
 It'll usually take me to https://pypi.org/ where I can get the correct name
 
