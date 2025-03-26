@@ -55,4 +55,10 @@ This will install the Jupyter backend that runs your notebooks.
 
 
 
-## Step 1: Open the Terminal in VS Code
+## Step 2: Create a Virtual Environment
+
+python3 -m venv venv
+
+This creates a new folder called venv which contains your isolated Python environment.
+
+
