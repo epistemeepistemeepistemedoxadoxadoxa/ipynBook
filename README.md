@@ -101,7 +101,12 @@ https://github.com/epistemeepistemeepistemedoxadoxadoxa/ipynBook/blob/main/image
 A kernel is the computational engine that runs your code. Each virtual environment or Python interpreter can act as a different kernel.
 
 <img width="250" alt="Screenshot 2025-03-26 at 7 00 24 PM" src="https://github.com/user-attachments/assets/41f39403-4d8d-49f1-911d-6cc134892cce" />
+<img width="617" alt="Screenshot 2025-03-26 at 7 01 51 PM" src="https://github.com/user-attachments/assets/be51306f-236c-48f3-8933-cc4c8c587cae" />
 
+## Step 7: Choose Your Virtual Environment
+
+If you’ve already activated your venv, it should show up as something like:
+Python 3.x.x ('venv': venv)
 
 
 
