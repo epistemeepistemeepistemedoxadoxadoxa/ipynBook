@@ -61,4 +61,20 @@ python3 -m venv venv
 
 This creates a new folder called venv which contains your isolated Python environment.
 
+## Step 3: Activate the Virtual Environment
+
+On macOS/Linux:
+source venv/bin/activate
+
+On Windows (PowerShell):
+venv\Scripts\Activate.ps1
+
+## Step 4: Install Dependencies
+
+Install ipynb_requirements.txt file:
+pip install -r ipynb_requirements.txt
+
+
+
+
 
