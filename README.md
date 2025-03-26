@@ -120,8 +120,10 @@ It'll also usually have a star  next to it.
 # Part 3
 
 ## Run the program... 
+
 ## Once your venv is working, you'll be able to start the program by clicking "Run All"
 <img width="424" alt="Screenshot 2025-03-26 at 7 10 18 PM" src="https://github.com/user-attachments/assets/f9f1fae4-6425-4c8c-8b11-ddcdff5c18fd" />
+
 
 If your venv isn't setup yet, you'll see an error at the very bottom of the code:
 <img width="1144" alt="Screenshot 2025-03-26 at 7 11 40 PM" src="https://github.com/user-attachments/assets/04fe041c-cf5c-4fc3-a571-c6176fd297fd" />
