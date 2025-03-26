@@ -46,7 +46,7 @@ This will install the Jupyter backend that runs your notebooks.
 - You’re ready to start coding in cells!
 
 
-
+# Part 2
 
 ## Step 1: Open the Terminal in VS Code
 
