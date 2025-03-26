@@ -42,3 +42,12 @@ This will install the Jupyter backend that runs your notebooks.
 - Open a `.ipynb` file or create a new one:  
   `File > New File > Jupyter Notebook`
 - You’re ready to start coding in cells!
+
+
+
+
+# Step 1: Open the Terminal in VS Code
+
+
+
+# Step 1: Open the Terminal in VS Code
