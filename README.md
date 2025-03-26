@@ -112,9 +112,6 @@ It'll also usually have a star  next to it.
 <img width="616" alt="Screenshot 2025-03-26 at 7 03 08 PM" src="https://github.com/user-attachments/assets/e076f650-a5e8-4d9b-bd03-654b3cf512bf" />
 <img width="282" alt="Screenshot 2025-03-26 at 7 04 44 PM" src="https://github.com/user-attachments/assets/bdd6c60b-af80-443f-912b-269f024ca11c" />
 
-## Step 8 OPT: image_treat_3styles.ipynb Specific Installs
-
-pip install numpy Pillow opencv-python 
 
 # Part 3
 
