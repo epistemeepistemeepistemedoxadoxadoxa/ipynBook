@@ -121,7 +121,7 @@ It'll also usually have a star  next to it.
 
 ## Run the program... 
 
-## Once your venv is working, you'll be able to start the program by clicking "Run All"
+# Once your venv is working, you'll be able to start the program by clicking "Run All"
 <img width="424" alt="Screenshot 2025-03-26 at 7 10 18 PM" src="https://github.com/user-attachments/assets/f9f1fae4-6425-4c8c-8b11-ddcdff5c18fd" />
 
 
