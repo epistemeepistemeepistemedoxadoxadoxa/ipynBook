@@ -4,14 +4,14 @@
 
 This guide will walk you through installing Jupyter Notebooks on your computer using Visual Studio Code (VS Code).
 
-## Step 1: Install VS Code
+## Step 1: Install VS Code (You Likely Have This)
 
 If you haven’t already:
 
 1. Go to [https://code.visualstudio.com/](https://code.visualstudio.com/)
 2. Download and install the latest version for your operating system.
 
-## Step 2: Install Python
+## Step 2: Install Python (You Likely Have This)
 
 Make sure Python is installed on your system.
 
