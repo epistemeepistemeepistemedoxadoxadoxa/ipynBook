@@ -58,6 +58,45 @@ This will install the Jupyter backend that runs your notebooks.
 <img width="1800" alt="Screenshot 2025-03-26 at 6 40 05 PM" src="https://github.com/user-attachments/assets/c327ea33-4513-4e4d-ab1e-8e9bc6c9eaaa" />
 <img width="316" alt="Screenshot 2025-03-26 at 6 40 02 PM" src="https://github.com/user-attachments/assets/a12c6fe1-589d-44bf-87ad-b8e1d12e666c" />
 
+🔧 Python Version
+
+This project requires Python 3.13.2.
+
+To make sure you’re using the correct version:
+
+Check Your Current Version
+Open a terminal and run:
+
+python3 --version"
+
+It should output:
+Python 3.13.2
+
+If not, install the correct version using pyenv:
+
+Option 2: Install with pyenv
+
+curl https://pyenv.run | bash
+
+Then add this to your shell profile (.zshrc, .bashrc, or .bash_profile):
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+
+Now install Python 3.13.2:
+
+pyenv install 3.13.2
+pyenv local 3.13.2
+
+This will ensure you’re using the correct version in this project folder.
+
+Optional: Add .python-version
+
+To lock the version using pyenv, include a .python-version file in the repo:
+
+echo "3.13.2" > .python-version
+
 
 ## Step 2: Create a Virtual Environment
 
