@@ -174,7 +174,8 @@ I can also paste the error into an LLM
 ## Feel free to edit the code's programs. The best one for easy editing will be: image_treat_3styles.ipynb
 https://github.com/epistemeepistemeepistemedoxadoxadoxa/ipynBook/blob/main/image_treat_3styles.ipynb
 
-Here are some examples of image treatments you might make:
+You probably have image treatments that you'd love to emulate but if not,
+here are some examples.
 https://www.are.na/theo-france-haggi-iaj8chvcad8/potential-effects
 
 In the class <i>ImageStyleTransformer</i> all of the image effects are stored... You can paste the entire section of code or just snippets into an LLM along with another effect that you'd to try and see if you can add it...
