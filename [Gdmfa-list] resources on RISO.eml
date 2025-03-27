@@ -1,0 +1,254 @@
+Delivered-To: theo.haggins@bulldogs.yale.edu
+Received: by 2002:a05:6a06:410d:b0:6b3:78a1:d032 with SMTP id ga13csp392505pib;
+        Sat, 17 Feb 2024 11:45:39 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUnXtFnIcnTnzZH9fdhx0yrKN/G4SmaYqRPncmpLX0DHpneOW5TosrwoZl6tau0gouK90ttRurOroBjN1RJw8tmo9zGoQzb3OKYwNFWlS0=
+X-Google-Smtp-Source: AGHT+IHuc8It9wnI/FMvrEL//Q1W/MhQcDQsq34biy7gMVRQNuHoDaO7fQ7uu/TY563ljp8nIhJF
+X-Received: by 2002:a05:6870:6125:b0:21e:6080:d541 with SMTP id s37-20020a056870612500b0021e6080d541mr5674390oae.48.1708199138649;
+        Sat, 17 Feb 2024 11:45:38 -0800 (PST)
+Return-Path: <gdmfa-1-bounces@mailman.yale.edu>
+Received: from toast.mail.yale.edu (toast.mail.yale.edu. [130.132.50.53])
+        by mx.google.com with ESMTPS id d22-20020a05620a167600b00787236ce511si2761545qko.179.2024.02.17.11.45.37
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 17 Feb 2024 11:45:38 -0800 (PST)
+Received-SPF: pass (google.com: domain of gdmfa-1-bounces@mailman.yale.edu designates 130.132.50.53 as permitted sender) client-ip=130.132.50.53;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@yale.edu header.s=googleprd header.b="RD/uqlfx";
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of gdmfa-1-bounces@mailman.yale.edu designates 130.132.50.53 as permitted sender) smtp.mailfrom=gdmfa-1-bounces@mailman.yale.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=yale.edu
+Received: from lists.mail.yale.edu (lists.mail.yale.edu [130.132.50.4])
+	by toast.mail.yale.edu (Postfix) with ESMTPS id C6941A7A82;
+	Sat, 17 Feb 2024 14:45:37 -0500 (EST)
+Received: from lists.mail.yale.edu (localhost [127.0.0.1])
+	by lists.mail.yale.edu (Postfix) with ESMTP id B8258E16AF;
+	Sat, 17 Feb 2024 14:45:37 -0500 (EST)
+X-Original-To: gdmfa-1@mailman.yale.edu
+Delivered-To: gdmfa-1@mailman.yale.edu
+Received: from lists.mail.yale.edu (localhost [127.0.0.1])
+ by lists.mail.yale.edu (Postfix) with ESMTP id A6179E16AF
+ for <gdmfa-1@mailman.yale.edu>; Sat, 17 Feb 2024 14:45:36 -0500 (EST)
+X-Original-To: gdmfa-list@mailman.yale.edu
+Delivered-To: gdmfa-list@mailman.yale.edu
+Received: from earlgrey.mail.yale.edu (earlgrey.mail.yale.edu [130.132.50.30])
+ by lists.mail.yale.edu (Postfix) with ESMTPS id 31A82E16AF
+ for <gdmfa-list@mailman.yale.edu>; Sat, 17 Feb 2024 14:45:35 -0500 (EST)
+Received: from NAM10-MW2-obe.outbound.protection.outlook.com
+ (mail-mw2nam10lp2100.outbound.protection.outlook.com [104.47.55.100])
+ by earlgrey.mail.yale.edu (Postfix) with ESMTPS id EFD6C609CE
+ for <gdmfa-list@mailman.yale.edu>; Sat, 17 Feb 2024 14:45:34 -0500 (EST)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=X85kNyEImw7qdq6s9fBZOCHkPHgQ/waMFFIJdVwv0Fq2GyjShlYSJxSVmFBAR6VIEu661W8NX14jIE+tJbSUMQXvg0uBmSfZszaL8vJs4x0zc6OszMNPfgUS9Ryp1CaDl6lwNtQPwhV1FupSBg1lZoMpfD9UFhz3Nkl0/JfiKuoIDv9PARw21ytbLuzdDIeb0A+qCZwKwWYwOwy2hnysfVVpwC+g4J2wwWx+MOWTcL0NTsYAcUWNQQkIAmK6U5Y2fS6xXncuXqLqQzkGTpIPDmtrmIn3sjzAlnA2MetdWWYZwIDKoEWpL90J3W6KgfZEZ+0flRB3tYWYmKu7+KILDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Pfp67iGF0h/wLJP6jakADVSPUpWuWMmQTrMmidmfu/c=;
+ b=LsQW3AGMYH6np1ugKn1qd0EtmtKbDLzRxh5GLEuBPipVDOkekom/KEPeWMQdQKRblvlkXOvzUPQSqEcVrKnhlB2SInCF8Qqk26RBC+yCHWg6FmqXzL5fjaPDJplpRiprbLZSGpyz6vktjMSRXuFG/7znDDNq6wMUqki7wIPIzzH9YB9IW3txYdLtctEjWuP4deJQc6BLv8BbMEoFOuIGNr+Etn5kcf8X7YiHthHBxqrrdXQ79K7xlz3xNkl9qggUmGkjWnoYvouuXELoP0B6b9Cadvr+UoWmDT1vSc9/s6KUiBe6OshmEDixadElyqsGzgxdgXqELaBOZDG1UGdiCQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is
+ 209.85.208.49) smtp.rcpttodomain=mailman.yale.edu smtp.mailfrom=yale.edu;
+ dmarc=pass (p=none sp=none pct=100) action=none header.from=yale.edu;
+ dkim=pass (signature was verified) header.d=yale.edu; arc=none (0)
+Received: from DS7PR03CA0310.namprd03.prod.outlook.com (2603:10b6:8:2b::9) by
+ DM3PR08MB9516.namprd08.prod.outlook.com (2603:10b6:0:4a::12) with
+ Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7292.32; Sat, 17 Feb 2024 19:45:32 +0000
+Received: from CY4PEPF0000FCC1.namprd03.prod.outlook.com
+ (2603:10b6:8:2b:cafe::a8) by DS7PR03CA0310.outlook.office365.com
+ (2603:10b6:8:2b::9) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7292.29 via Frontend
+ Transport; Sat, 17 Feb 2024 19:45:32 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.49)
+ smtp.mailfrom=yale.edu; dkim=pass (signature was verified)
+ header.d=yale.edu;dmarc=pass action=none header.from=yale.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of yale.edu designates
+ 209.85.208.49 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.49; helo=mail-ed1-f49.google.com; pr=C
+Received: from mail-ed1-f49.google.com (209.85.208.49) by
+ CY4PEPF0000FCC1.mail.protection.outlook.com (10.167.242.103) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7292.25 via Frontend Transport; Sat, 17 Feb 2024 19:45:31 +0000
+Received: by mail-ed1-f49.google.com with SMTP id
+ 4fb4d7f45d1cf-55c2cf644f3so4141038a12.1
+ for <gdmfa-list@mailman.yale.edu>; Sat, 17 Feb 2024 11:45:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=yale.edu; s=googleprd; t=1708199130; x=1708803930; darn=mailman.yale.edu;
+ h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+ :date:message-id:reply-to;
+ bh=Pfp67iGF0h/wLJP6jakADVSPUpWuWMmQTrMmidmfu/c=;
+ b=RD/uqlfxyHaQND5Yn5k2HlNbxLczzMrgA7PK2V0Q1Nmad+iHQIg1ZBPn/8aBCtj9EQ
+ OyzEH7QU6TOEYf8fC/jRS+0tdpHvpIy5t4APdxIb2b0g5mqJ09Bzag1DXR+RxSsNjoQz
+ uzSIr9qAo+B0hFl2O1kYk6b8WJ3YnIE0yjYwY=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20230601; t=1708199130; x=1708803930;
+ h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+ :from:to:cc:subject:date:message-id:reply-to;
+ bh=Pfp67iGF0h/wLJP6jakADVSPUpWuWMmQTrMmidmfu/c=;
+ b=CsZkbN6fTU1TA4sfhDoSuGgs9jfHfkL+ZOXj54JEfLc2Ljyc3I8YcTPib+X6/WMb8F
+ H1QBXOlXbqAM4C8UR1jvfChWtFTzMMQ6heGVvIdVP07Y5YYhy+bambP2acLVDWlBMEDG
+ Nf8JWdyB8NDz25C86kmGL86ukXxz8SVR0s+1pAjXsB3obp9iNeeu7pkc0EcdAhj+kCZW
+ 1M8CsPd6DcgtUBumovLXdcMO1+4dIgYkPJkkQWEWdyVIg7bPr6OSsybc9/QFnO6SGcIt
+ pclF+Kv3EMmPziRXoMXoSkteD9v8U+oiRAcFZXBNYeSs7UtBv5h3JqvbERbZEmnZK6Km
+ uMeg==
+X-Gm-Message-State: AOJu0YxTQoHf+VMcSNkoMT+O257XXaN4oB5/ZwgFOKzvFlkMp4xiao8a
+ GF+ZzsfNbKvFAnsT51BhVMXM0RMjoM0fNSKCPyLqCeh/FsLtzkXv3O9wlQgmnLq4WshcAzL4UbR
+ yLgpOKvgfN2fDKbVM4txxjhV9HWI71osuXH0PEGkCpIfcwskqg7IUMw==
+X-Received: by 2002:aa7:c916:0:b0:563:ffdc:c012 with SMTP id
+ b22-20020aa7c916000000b00563ffdcc012mr3701655edt.10.1708199129468; Sat, 17
+ Feb 2024 11:45:29 -0800 (PST)
+MIME-Version: 1.0
+From: Daedalus Li <daedalus.li@yale.edu>
+Date: Sat, 17 Feb 2024 14:45:13 -0500
+Message-ID: <CAHH=fRKg+eGzPx4CEKmFq-KfFNVinhzu3=-Hgs=gpvcfkpJQuA@mail.gmail.com>
+To: gdmfa-list@mailman.yale.edu, Gdmfa-2 <Gdmfa-2@mailman.yale.edu>, 
+ GD MFA Prelim <gdmfa-prelim@mailman.yale.edu>
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: dd8cbebb-2139-4df8-b411-4e3e87abeb5c:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CY4PEPF0000FCC1:EE_|DM3PR08MB9516:EE_
+X-MS-Office365-Filtering-Correlation-Id: 28948f45-e4b2-4423-99be-08dc2ff10013
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info: =?utf-8?B?WURxWld1RDNhN3JWSm9VckRHRERvTldPaFBQSFJIbmtEU2xwYkE4Z09DZTY2?=
+ =?utf-8?B?QzBCSEgwbXBrZ0txcmRPR04zQktZRi9GTkIxU1FHSDI1dWRnT1ZHSjkrTVFv?=
+ =?utf-8?B?bWZJNlJVUnVtTWdOejhjdnRMZnk1YlNwaHdYdDFjNTFNd2w2WDhTZitTMklN?=
+ =?utf-8?B?NlVVODBaUGpTbk9MOFhzamJHdFozSW1LZWxRZjFySjlZcEJBSURXWTFtQVBh?=
+ =?utf-8?B?VjlSL0ozKzhTVlN3eHk0bE5sSGxOM2ozRXdNUU5qNjNjVnlBa0FwZEJXVHJP?=
+ =?utf-8?B?K3BQeUR5VFhtTTNzQXI1d2RJYWVqVHN1dWw3ZHFQRmQ2bi92a2dBSHZTeFFD?=
+ =?utf-8?B?NWJ1eTdLWXo1UDRwajQ4eTU4WXlnM2IwaUpYZ25yWlJQWFdDWEpMRWdBY3F0?=
+ =?utf-8?B?U3IwVCtURHBKbStuRXZ5dDRlaFdWMVpSL1JHVE5udkdWNXJLVVp4Q2l4US9T?=
+ =?utf-8?B?dlA4Zm5VNlNkNVpYTndnRnBqNHJVOFNuMFQwd0FwTUpkbHZmSTZvNjZYbTZk?=
+ =?utf-8?B?ZTZnY1krK1FscHdOU3NBeWpGY3d2OVFkWFc3dXN4eUhiYnBveHhQeHVGU1pz?=
+ =?utf-8?B?cS9NWVVqUkE1SElZZEhpbjRDdXJLVlNTcU1QZHMvMGlQdHMxdmhISEkxSWsy?=
+ =?utf-8?B?b0REY0grWDhBczgvVTdRV1l5eE0ramxINEFXSDdZZWJHS1hCcTEydjRTT0h6?=
+ =?utf-8?B?MWpMMHR3dHQ0MVcxM2VOVTRhSmhiLytLbjYwaVIwakxIOGVnWGVnTDdKTTc5?=
+ =?utf-8?B?SVg5Snd4YzJFNG5oSlZaSFNJNEg5Q1R6R1UwYWFKUGNCK1pZSGp1SUd2Wmx4?=
+ =?utf-8?B?ZkJzNG1QMmV1blpEaXJMQmI1RGEvSkVpUTdNMGt1anhRd04zVFZ3UFpNYmNt?=
+ =?utf-8?B?dmhNRitTR2ROSEpDOW9QODBLYkdxcTRQZDlKSzI1OXUyMTdpL0RodzN5RVRY?=
+ =?utf-8?B?ako4RldtREVQbVFSbmJlUTM1OXZOamlsZ0tUeGZSZDFUVnM4cExJc05Pc2xM?=
+ =?utf-8?B?b01adkY4UjRVSFQxa2ZMMzZxTmFycW0rdDVTYTh5aE9TM1duRzMrWlYzT2hN?=
+ =?utf-8?B?K3E5NTYxVEVzeXQ4cDFQK3JVYklzeFc2OHhXUFphZzd4VnFtbU4rYkR4RTBv?=
+ =?utf-8?B?bUdpK2htMHdUUHdMUUJ3Zlg0dWpiRGNHRDhjMnVRbVgvVjFGakE1TW9hdmNk?=
+ =?utf-8?B?eHBpRWlLWDM1WXZnNzdWRTVWN3N0ckZGQWpkL1pJTG10MkZZdjJsOXZ2aFo1?=
+ =?utf-8?B?T2gwYXZNd0pYckZMVHpqaDN0a1dIV0ptdnlWTkovc0l0NTMxZ3FoSTdMbFJP?=
+ =?utf-8?B?My8wZEl1eEFiRVpiVHF6aVhSRWNyTUU4MHgyTk16NllyNUFNeG5sVjM0Ukt1?=
+ =?utf-8?B?ZUpNRmdsUUdCenlET2RyWUhWNHRFQmNodlJyVDdGZm5LRS82T1pvV3NIN2pC?=
+ =?utf-8?B?dkZXSHBDTXZCdm1rMmxUdVFibGs1V2pzSWZaQm5MVnlEaGVBa05HckpHWllt?=
+ =?utf-8?B?WU5NOWVhcFQ4QzVXVHFWaHpadTdkMHhqSkVjUTZjQUJza1lvQWplZmgrbThD?=
+ =?utf-8?Q?GkI/Zb5m03I4eSpeH3555vYUtLr9B9DcPm71Skr2ivu0Eb?=
+X-Forefront-Antispam-Report: CIP:209.85.208.49; CTRY:US; LANG:en; SCL:1; SRV:; 
+ IPV:NLI; SFV:NSPM; H:mail-ed1-f49.google.com;
+ PTR:mail-ed1-f49.google.com; CAT:NONE;
+ SFS:(13230031)(4636009)(451199024)(3480700007)(166002)(55446002)(86362001)(7596003)(356005)(7636003)(33964004)(966005)(9686003)(6666004)(42186006)(110136005)(45080400002)(336012)(26005)(75432002)(19625915010)(75640400001)(44832011)(1096003)(4006050)(7116003)(5660300002)(8676002);
+ DIR:INB; 
+X-OriginatorOrg: yale.edu
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Feb 2024 19:45:31.4519 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 28948f45-e4b2-4423-99be-08dc2ff10013
+X-MS-Exchange-CrossTenant-Id: dd8cbebb-2139-4df8-b411-4e3e87abeb5c
+X-MS-Exchange-CrossTenant-AuthSource: CY4PEPF0000FCC1.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM3PR08MB9516
+Subject: [Gdmfa-list] resources on RISO
+X-BeenThere: gdmfa-list@mailman.yale.edu
+X-Mailman-Version: 2.1.39
+Precedence: list
+Content-Type: multipart/mixed; boundary="===============8593732203213064752=="
+X-BeenThere: gdmfa-1@mailman.yale.edu
+List-Id: Gdmfa-1 <gdmfa-1.mailman.yale.edu>
+List-Unsubscribe: <https://mailman.yale.edu/mailman/options/gdmfa-1>,
+ <mailto:gdmfa-1-request@mailman.yale.edu?subject=unsubscribe>
+List-Post: <mailto:gdmfa-1@mailman.yale.edu>
+List-Help: <mailto:gdmfa-1-request@mailman.yale.edu?subject=help>
+List-Subscribe: <https://mailman.yale.edu/mailman/listinfo/gdmfa-1>,
+ <mailto:gdmfa-1-request@mailman.yale.edu?subject=subscribe>
+Errors-To: gdmfa-1-bounces@mailman.yale.edu
+Sender: "Gdmfa-1" <gdmfa-1-bounces@mailman.yale.edu>
+
+--===============8593732203213064752==
+Content-Type: multipart/alternative; boundary="00000000000051a9e90611991a03"
+
+--00000000000051a9e90611991a03
+Content-Type: text/plain; charset="UTF-8"
+
+Hi all,
+
+Anahita compiled some tutorials and resources on RISO printing that are
+linked in this Google sheet
+<https://docs.google.com/spreadsheets/d/14D0ziiT-1JW92vXutGNyODmhHmhw4zQxE9UZFD4DwrY/edit#gid=1160548473>.
+(you could also find general resources on digital lab on this sheet)
+
+1. to print through your laptop, please go through this Google Doc
+<https://docs.google.com/document/d/1pYxa0fmVyNz_kqiWHFe2YKP4EXxVN3fDlKqPZon9OYI/edit#heading=h.m0xs9yircnd9>
+instruction to install the RISO driver to your own laptop. (thanks to
+Darnell)
+
+2. a RISO training video by Luiza.
+https://www.youtube.com/watch?v=8HWbYi5Vk3k&ab_channel=YaleSchoolofArt
+
+3. color printing step by step doc
+<https://docs.google.com/document/d/1ocG2ERf10ZMp5rmD7v9cWDr9c9g_oeTj10xkhRG500Y/edit#heading=h.a7rmtpyfo7lk>,
+color channel splitting tutorial
+<https://www.youtube.com/watch?v=Y5zYvwt8J24&ab_channel=CCSImagingCenter>
+and organized tips
+<https://drive.google.com/file/d/1GUv_Qc7ZvJffB1JkznaHMXhQGcMMJEmI/view>
+(thanks to Rok)
+
+4. riso color swatches
+<https://drive.google.com/file/d/1LCc8-TbqfGPPhRumaH1e2ZiwoHhWFNvX/view?usp=sharing>
+for Adobe software.
+
+best,
+daedalus
+
+--00000000000051a9e90611991a03
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi all,<div><br></div><div>Anahita compiled some tutorials=
+ and resources on RISO printing that are linked in this <a href=3D"https://=
+docs.google.com/spreadsheets/d/14D0ziiT-1JW92vXutGNyODmhHmhw4zQxE9UZFD4DwrY=
+/edit#gid=3D1160548473">Google sheet</a>. (you could also find general reso=
+urces on digital lab on this sheet)</div><div><br></div><div>1. to print th=
+rough your laptop, please go through this <a href=3D"https://docs.google.co=
+m/document/d/1pYxa0fmVyNz_kqiWHFe2YKP4EXxVN3fDlKqPZon9OYI/edit#heading=3Dh.=
+m0xs9yircnd9">Google Doc</a> instruction to install the RISO driver to your=
+ own laptop. (thanks to Darnell)</div><div><br></div><div>2. a RISO trainin=
+g video by Luiza.=C2=A0<a href=3D"https://www.youtube.com/watch?v=3D8HWbYi5=
+Vk3k&amp;ab_channel=3DYaleSchoolofArt">https://www.youtube.com/watch?v=3D8H=
+WbYi5Vk3k&amp;ab_channel=3DYaleSchoolofArt</a></div><div><br></div><div>3. =
+color printing step by step <a href=3D"https://docs.google.com/document/d/1=
+ocG2ERf10ZMp5rmD7v9cWDr9c9g_oeTj10xkhRG500Y/edit#heading=3Dh.a7rmtpyfo7lk">=
+doc</a>, color channel splitting=C2=A0<a href=3D"https://www.youtube.com/wa=
+tch?v=3DY5zYvwt8J24&amp;ab_channel=3DCCSImagingCenter">tutorial</a> and org=
+anized <a href=3D"https://drive.google.com/file/d/1GUv_Qc7ZvJffB1JkznaHMXhQ=
+GcMMJEmI/view">tips</a> (thanks to Rok)</div><div><br></div><div>4. riso <a=
+ href=3D"https://drive.google.com/file/d/1LCc8-TbqfGPPhRumaH1e2ZiwoHhWFNvX/=
+view?usp=3Dsharing">color swatches</a> for Adobe software.=C2=A0</div><div>=
+<br></div><div>best,</div><div>daedalus</div><div><br></div></div>
+
+--00000000000051a9e90611991a03--
+
+--===============8593732203213064752==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Gdmfa-list mailing list
+Gdmfa-list@mailman.yale.edu
+https://mailman.yale.edu/mailman/listinfo/gdmfa-list
+
+--===============8593732203213064752==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Gdmfa-1 mailing list
+Gdmfa-1@mailman.yale.edu
+https://mailman.yale.edu/mailman/listinfo/gdmfa-1
+
+--===============8593732203213064752==--
